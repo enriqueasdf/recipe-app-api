@@ -41,7 +41,10 @@ DJANGO_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
 ]
-THIRD_PARTY_APPS = []
+THIRD_PARTY_APPS = [
+    "rest_framework",
+    "drf_spectacular",
+]
 LOCAL_APPS = [
     "core.apps.CoreConfig",
 ]
@@ -138,3 +141,9 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 # Auth user model
 # ----------------------------------------------------------------------------
 AUTH_USER_MODEL = "core.User"
+
+# REST framework
+# ----------------------------------------------------------------------------
+REST_FRAMEWORK = {
+    "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",
+}
